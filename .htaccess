@@ -1,0 +1,14 @@
+RewriteEngine on
+
+# User cannot access to any sensitive folders
+RewriteRule ^(db_sqlite3|php_library|php_template)(/|$) - [F,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Modify URLs
+RewriteRule ^([\w-]+)?$ index.php?page=$1 [QSA,L]
+RewriteRule ^dashboard/([\w-]+)?$ index.php?admin=$1 [L,QSA,NC]
+RewriteRule ^api/([\w-]+)?$ index.php?module=$1 [L,QSA,NC]
+RewriteRule ^p/([\w-]+)?$ index.php?post=$1 [L,QSA,NC]
+RewriteRule ^category/([\w-]+)?$ index.php?category=$1 [L,QSA,NC]
