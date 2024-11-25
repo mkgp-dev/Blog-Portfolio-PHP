@@ -22,6 +22,7 @@ Blog PHP integrated with your portfolio
  - **SQLite3** for storing local database
  - **[Bootstrap](https://getbootstrap.com/)** for theme
  - **[Fontawesome](https://fontawesome.com/)** for icons
+ - **[Quill](https://quilljs.com/)** for WYSIWYG HTML Editor
  - **[Uniform Server](https://www.uniformserver.com/)** for local hosting
 
 
